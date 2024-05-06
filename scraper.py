@@ -7,6 +7,26 @@ from bs4 import BeautifulSoup
 from tabulate import tabulate
 
 
+class scraped:
+    def __init__(self, title, link):
+        self.title = title
+        self.link = link
+
+    def format_title(self):
+        var = self.title.replace("…\xa0and", "...")
+        var = var.replace("\xa0…", "...")
+        var = var.rstrip()
+        var = var.lstrip()
+        return var
+
+    def rating(self, f_title, keywords: list):
+        keywords_l = [element.lower() for element in keywords]
+        f_title = f_title.lower()
+        N = sum(f_title.count(element) for element in keywords_l)
+        score = (N * 5) / len(keywords)
+        return score
+
+
 def scholar_scraper(keywords: list, num_pages, most_recent="yes"):
     papers = []
     page = 0
@@ -39,32 +59,30 @@ def scholar_scraper(keywords: list, num_pages, most_recent="yes"):
                     continue
                 else:
                     title = title.replace(doc_type2, "")
-            title = title.replace("…\xa0and", "...")
-            title = title.replace("\xa0…", "...")
-            title = title.rstrip()
-            title = title.lstrip()
-            title_l = title.lower()
-            keywords_l = [element.lower() for element in keywords]
-            N = sum(title_l.count(element) for element in keywords_l)
-            rating = (N * 5) / len(keywords)
+
             link = result.find("a")["href"]
-            papers.append({"Rating": rating, "Title": title, "Link": link})
+
+            paper = scraped(title, link)
+            f_title = paper.format_title()
+            score = paper.rating(f_title, keywords)
+
+            papers.append({"Score": score, "Title": f_title, "Link": paper.link})
 
         page += 1
 
-    field_names = ["Rating", "Title", "Link"]
-    with open("csvs/papers.csv", "w", encoding="utf-8") as file:
+    field_names = ["Score", "Title", "Link"]
+    with open("papers.csv", "w", encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=field_names)
         writer.writeheader()
         writer.writerows(papers)
 
-    df = pd.read_csv("csvs/papers.csv")
-    df = df.sort_values(by=["Rating"], ascending=False)
+    df = pd.read_csv("papers.csv")
+    df = df.sort_values(by=["Score"], ascending=False)
     # print(df)
 
     headers = df.columns.tolist()
     headers.insert(0, 'Index')
-    tabula = tabulate(df[["Rating", "Title"]], headers=headers, showindex=True, colalign=("left", "left", "left"),
+    tabula = tabulate(df[["Score", "Title"]], headers=headers, showindex=True, colalign=("left", "left", "left"),
                       tablefmt="simple", maxcolwidths=[5, 5, 120])
 
     print(tabula)
