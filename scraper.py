@@ -89,4 +89,4 @@ def scholar_scraper(keywords: list, num_pages, most_recent="yes"):
 
 
 if __name__ == "__main__":
-    scholar_scraper(["sicurezza", "lavoro"], 5)
+    scholar_scraper(["work", "safety"], 5)
