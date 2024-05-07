@@ -30,11 +30,11 @@ class scraped:
         return score
 
 
-@click.command(help="Launch the scraping activity")
+@click.Command("scrape", help="Launch the scraping activity")
 @click.argument("keywords", nargs=-1)
 @click.option("-n", "--num_pages", type=click.INT, default=1)
 @click.option("-y", "--most_recent", is_flag=True)
-def scrape(keywords: list, num_pages, most_recent):
+def scrape(keywords, num_pages, most_recent):
     papers = []
     page = 0
     current_dateTime = datetime.now()
@@ -94,13 +94,14 @@ def scrape(keywords: list, num_pages, most_recent):
     print(tabula)
 
 
-@click.command()
+@click.Command("search", help="Open the chosen articles in the browser")
 @click.argument("indices", nargs=-1)
-def search(indices: list):
+def search(indices):
     df = pd.read_csv("papers.csv")
     for i in indices:
         webbrowser.open(df.iloc[i]['Link'])
     print("The papers you indicated were opened in the browser")
+
 
 # if __name__ == "__main__":
 #     scholar_scraper(["sicurezza", "lavoro"], 1)
