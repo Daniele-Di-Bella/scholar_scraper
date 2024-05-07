@@ -1,7 +1,8 @@
 # Entry for Command Line Interface
 
 import click
-import commands
+import scraper
+
 
 @click.group()
 def cli():
