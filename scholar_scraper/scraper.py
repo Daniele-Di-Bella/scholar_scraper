@@ -1,6 +1,7 @@
 import csv
 import webbrowser
 from datetime import datetime
+import click
 
 import pandas as pd
 import requests
@@ -28,7 +29,9 @@ class scraped:
         score = (N * 100) / len(keywords)
         return score
 
-
+@click.command()
+@click.argument()
+@click.option()
 def scholar_scraper(keywords: list, num_pages, most_recent="yes"):
     papers = []
     page = 0
