@@ -29,10 +29,12 @@ class scraped:
         score = (N * 100) / len(keywords)
         return score
 
-@click.command()
-@click.argument()
-@click.option()
-def scholar_scraper(keywords: list, num_pages, most_recent="yes"):
+
+@click.command(help="Launch the scraping activity")
+@click.argument("keywords", nargs=-1)
+@click.option("-n", "--num_pages", type=click.INT, default=1)
+@click.option("-y", "--most_recent", is_flag=True)
+def scrape(keywords: list, num_pages, most_recent):
     papers = []
     page = 0
     current_dateTime = datetime.now()
@@ -42,7 +44,7 @@ def scholar_scraper(keywords: list, num_pages, most_recent="yes"):
         query = query + "+" + i
 
     while page < num_pages:
-        if most_recent == "yes":
+        if most_recent:
             url = f"https://scholar.google.com/scholar?start={page * 10}&q={query}&hl=en&as_sdt=0,5&as_ylo={current_year}"
         else:
             url = f"https://scholar.google.com/scholar?start={page * 10}&q={query}&hl=en&as_sdt=0,5"
@@ -75,7 +77,7 @@ def scholar_scraper(keywords: list, num_pages, most_recent="yes"):
         page += 1
 
     field_names = ["Score", "Title", "Link"]
-    with open("papers.csv", "w", encoding="utf-8") as file:
+    with search("papers.csv", "w", encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=field_names)
         writer.writeheader()
         writer.writerows(papers)
@@ -92,33 +94,13 @@ def scholar_scraper(keywords: list, num_pages, most_recent="yes"):
     print(tabula)
 
 
-def opener(csv_file: str):
-    print("Are you interested in some of these papers? y/n")
-    ans = input()
-
-    if ans == "y":
-        print("Write below their indices separated by a comma:")
-        indices = input()
-        print("Do you want to add more? y/n")
-        ans2 = input()
-
-        new_indices = ""
-        if ans2 == "y":
-            new_indices = input()
-
-        tot_indices = indices + new_indices
-        tot_indices = tot_indices.split(',')
-        nums = [int(ele.strip()) for ele in tot_indices]
-        df = pd.read_csv(csv_file)
-
-        for i in nums:
-            webbrowser.open(df.iloc[i]['Link'])
-
-        print("The papers you indicated were opened in the browser")
-
-    else:
-        print("Ok")
-
+@click.command()
+@click.argument("indices", nargs=-1)
+def search(indices: list):
+    df = pd.read_csv("papers.csv")
+    for i in indices:
+        webbrowser.open(df.iloc[i]['Link'])
+    print("The papers you indicated were opened in the browser")
 
 # if __name__ == "__main__":
 #     scholar_scraper(["sicurezza", "lavoro"], 1)

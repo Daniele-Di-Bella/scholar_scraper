@@ -1,5 +1,4 @@
 # Entry for Command Line Interface
-
 import click
 import scraper
 
@@ -8,10 +7,8 @@ import scraper
 def cli():
     pass
 
-cli.add_command(commands.add)
-cli.add_command(commands.sub)
-cli.add_command(commands.mul)
-cli.add_command(commands.div)
 
-if __name__ == "__main__":
-    cli()
+cli.add_command(scraper.scrape)
+cli.add_command(scraper.search)
+
+
