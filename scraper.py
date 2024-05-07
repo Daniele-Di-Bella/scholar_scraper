@@ -117,6 +117,6 @@ def opener(csv_file: str):
         print("Ok")
 
 
-if __name__ == "__main__":
-    scholar_scraper(["sicurezza", "lavoro"], 1)
-    opener("papers.csv")
+# if __name__ == "__main__":
+#     scholar_scraper(["sicurezza", "lavoro"], 1)
+#     opener("papers.csv")
