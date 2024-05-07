@@ -1,4 +1,5 @@
 import csv
+import webbrowser
 from datetime import datetime
 
 import pandas as pd
@@ -88,5 +89,34 @@ def scholar_scraper(keywords: list, num_pages, most_recent="yes"):
     print(tabula)
 
 
+def opener(csv_file: str):
+    print("Are you interested in some of these papers? y/n")
+    ans = input()
+
+    if ans == "y":
+        print("Write below their indices separated by a comma:")
+        indices = input()
+        print("Do you want to add more? y/n")
+        ans2 = input()
+
+        new_indices = ""
+        if ans2 == "y":
+            new_indices = input()
+
+        tot_indices = indices + new_indices
+        tot_indices = tot_indices.split(',')
+        nums = [int(ele.strip()) for ele in tot_indices]
+        df = pd.read_csv(csv_file)
+
+        for i in nums:
+            webbrowser.open(df.iloc[i]['Link'])
+
+        print("The papers you indicated were opened in the browser")
+
+    else:
+        print("Ok")
+
+
 if __name__ == "__main__":
-    scholar_scraper(["work", "safety"], 5)
+    scholar_scraper(["sicurezza", "lavoro"], 1)
+    opener("papers.csv")
