@@ -19,11 +19,12 @@ class scraped:
         var = var.lstrip()
         return var
 
-    def rating(self, f_title, keywords: list):
+    @staticmethod
+    def rating(f_title, keywords: list):
         keywords_l = [element.lower() for element in keywords]
         f_title = f_title.lower()
         N = sum(f_title.count(element) for element in keywords_l)
-        score = (N * 5) / len(keywords)
+        score = (N * 100) / len(keywords)
         return score
 
 
@@ -63,10 +64,9 @@ def scholar_scraper(keywords: list, num_pages, most_recent="yes"):
             link = result.find("a")["href"]
 
             paper = scraped(title, link)
-            f_title = paper.format_title()
-            score = paper.rating(f_title, keywords)
+            score = scraped.rating(paper.format_title(), keywords)
 
-            papers.append({"Score": score, "Title": f_title, "Link": paper.link})
+            papers.append({"Score": score, "Title": paper.format_title(), "Link": paper.link})
 
         page += 1
 
@@ -89,4 +89,4 @@ def scholar_scraper(keywords: list, num_pages, most_recent="yes"):
 
 
 if __name__ == "__main__":
-    scholar_scraper(["planktonic", "communities"], 5)
+    scholar_scraper(["sicurezza", "lavoro"], 5)
