@@ -99,7 +99,8 @@ def scrape(keywords, num_pages, most_recent):
 @click.command("search", help="Open the chosen articles in the browser")
 @click.argument("indices", nargs=-1)
 def search(indices):
-    df = pd.read_csv("papers.csv")
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    df = pd.read_csv(os.path.join(current_dir, "papers.csv"))
     for i in indices:
         webbrowser.open(df.iloc[i]['Link'])
     print("The papers you indicated were opened in the browser")
