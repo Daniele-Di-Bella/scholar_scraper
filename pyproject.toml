@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "scholar_scraper"
-version = "0.1.0"
+version = "0.0.0"
 description = "A CLI application that scrapes Google Scholar."
 readme = "README.md"
 authors = [{ name = "Daniele Di Bella", email = "daniele.dibella99@gmail.com" }]
 dependencies = "requirements.txt"
 
 [project.scripts]
-scholar_scraper = "scholar_scraper.main.cli"
+scholar_scraper = "scholar_scraper.main:cli"
