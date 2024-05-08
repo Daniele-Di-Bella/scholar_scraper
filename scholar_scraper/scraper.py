@@ -104,3 +104,7 @@ def search(indices):
     for i in indices:
         webbrowser.open(df.iloc[i]['Link'])
     print("The papers you indicated were opened in the browser")
+
+
+# if __name__ == "__main__":
+#     scrape(["planktonic", "communities"], 5)
