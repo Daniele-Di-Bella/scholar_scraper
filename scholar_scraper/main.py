@@ -1,4 +1,3 @@
-# Entry for Command Line Interface
 import click
 from scholar_scraper import scraper
 
