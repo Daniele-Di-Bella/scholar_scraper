@@ -1,4 +1,5 @@
 import csv
+import os
 import webbrowser
 from datetime import datetime
 import click
@@ -30,7 +31,7 @@ class scraped:
         return score
 
 
-@click.Command("scrape", help="Launch the scraping activity")
+@click.command("scrape", help="Launch the scraping activity")
 @click.argument("keywords", nargs=-1)
 @click.option("-n", "--num_pages", type=click.INT, default=1)
 @click.option("-y", "--most_recent", is_flag=True)
@@ -76,13 +77,14 @@ def scrape(keywords, num_pages, most_recent):
 
         page += 1
 
+    current_dir = os.path.dirname(os.path.abspath(__file__))
     field_names = ["Score", "Title", "Link"]
-    with search("papers.csv", "w", encoding="utf-8") as file:
+    with open(os.path.join(current_dir, "papers.csv"), "w") as file:
         writer = csv.DictWriter(file, fieldnames=field_names)
         writer.writeheader()
         writer.writerows(papers)
 
-    df = pd.read_csv("papers.csv")
+    df = pd.read_csv(os.path.join(current_dir, "papers.csv"))
     df = df.sort_values(by=["Score"], ascending=False)
     # print(df)
 
@@ -94,7 +96,7 @@ def scrape(keywords, num_pages, most_recent):
     print(tabula)
 
 
-@click.Command("search", help="Open the chosen articles in the browser")
+@click.command("search", help="Open the chosen articles in the browser")
 @click.argument("indices", nargs=-1)
 def search(indices):
     df = pd.read_csv("papers.csv")
