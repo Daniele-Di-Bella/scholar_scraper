@@ -79,7 +79,7 @@ def scrape(keywords, num_pages, most_recent):
 
     current_dir = os.path.dirname(os.path.abspath(__file__))
     field_names = ["Score", "Title", "Link"]
-    with open(os.path.join(current_dir, "papers.csv"), "w", encoding="UTF-8") as file:
+    with open(os.path.join(current_dir, "papers.csv"), "w", encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=field_names)
         writer.writeheader()
         writer.writerows(papers)
@@ -104,8 +104,3 @@ def search(indices):
     for i in indices:
         webbrowser.open(df.iloc[i]['Link'])
     print("The papers you indicated were opened in the browser")
-
-
-# if __name__ == "__main__":
-#     scholar_scraper(["sicurezza", "lavoro"], 1)
-#     opener("papers.csv")
