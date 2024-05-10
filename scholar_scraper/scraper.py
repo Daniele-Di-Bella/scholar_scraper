@@ -79,7 +79,8 @@ def scrape(keywords, num_pages, most_recent):
 
     current_dir = os.path.dirname(os.path.abspath(__file__))
     field_names = ["Score", "Title", "Link"]
-    with open(os.path.join(current_dir, "papers.csv"), "w", encoding="utf-8") as file:
+
+    with open(os.path.join(current_dir, "papers.csv"), "w", encoding="utf-8", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=field_names)
         writer.writeheader()
         writer.writerows(papers)
