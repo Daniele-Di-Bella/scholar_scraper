@@ -5,9 +5,9 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "scholar_scraper"
 version = "0.0.0"
-description = "A CLI application that scrapes Google Scholar."
+description = "A CLI application that scrapes Google Scholar and ranks papers according to a set of keywords."
 readme = "README.md"
-authors = [{ name = "Daniele Di Bella", email = "daniele.dibella99@gmail.com" }]
+authors = [{name = "Daniele Di Bella", email = "daniele.dibella99@gmail.com"}]
 dynamic = ["dependencies"]
 
 [tool.setuptools.dynamic]
