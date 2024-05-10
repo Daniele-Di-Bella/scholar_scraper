@@ -91,7 +91,7 @@ def scrape(keywords, num_pages, most_recent):
     headers = df.columns.tolist()
     headers.insert(0, 'Index')
     tabula = tabulate(df[["Score", "Title"]], headers=headers, showindex=True, colalign=("left", "left", "left"),
-                      tablefmt="simple", maxcolwidths=[5, 5, 120])
+                      tablefmt="simple", maxcolwidths=[5, 5, 100])
 
     print(tabula)
 
