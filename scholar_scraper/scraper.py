@@ -45,7 +45,7 @@ def scrape(keywords, num_pages, most_recent):
     for i in keywords:
         query = query + "+" + i
 
-    pbar = tqdm(total=num_pages)
+    pbar = tqdm(total=num_pages)  # Insert a comment that anticipates the progress bar
     while page < num_pages:
         if most_recent:
             url = f"https://scholar.google.com/scholar?start={page * 10}&q={query}&hl=en&as_sdt=0,5&as_ylo={current_year}"
