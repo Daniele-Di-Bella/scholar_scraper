@@ -1,14 +1,11 @@
 Score,Title,Link
-100.0,La formazione per la sicurezza sul lavoro,https://journals.uniurb.it/index.php/dsl/article/view/1246
-100.0,Tutela e sicurezza del lavoro,https://www.rivisteweb.it/doi/10.1441/4527
-100.0,"Sicurezza sul lavoro, ambiente e prevenzione: disciplina positiva e dilemmi regolativi",https://www.rivisteweb.it/doi/10.1441/103981
-100.0,La sicurezza del lavoro nell'ordinamento europeo,https://journals.uniurb.it/index.php/WP-olympus/article/view/270
-100.0,Sicurezza sul lavoro e pandemia,https://www.lavorodirittieuropa.it/images/Albi_Sicurezza_sul_lavoro_e_pandemia-def_1.pdf
-100.0,Tutela della sicurezza sul lavoro e questione ambientale,https://moodle.adaptland.it/pluginfile.php/935/mod_resource/content/0/1999_2.pdf#page=34
-100.0,La disciplina di salute e sicurezza applicabile al lavoro agile,https://dialnet.unirioja.es/servlet/articulo?codigo=6279109
-100.0,La sicurezza sul lavoro nel sistema degli appalti,https://journals.uniurb.it/index.php/WP-olympus/article/view/267
-100.0,Principio di prevenzione e sicurezza sul lavoro,javascript:void(0)
-100.0,Sicurezza sul lavoro e cooperazione del lavoratore,https://www.torrossa.com/it/resources/an/5122216
-100.0,Il diritto della sicurezza sul lavoro tra conferme e sviluppi,javascript:void(0)
-100.0,"Covid-19 e sicurezza sul lavoro: nuovi rischi, vecchie regole",https://csdle.lex.unict.it/sites/default/files/Documenti/Articoli/2020-1_Natullo.pdf
-100.0,La nuova disciplina della sicurezza sul lavoro del 2008/2009: una rapsodia su novità e conferme,https://journals.uniurb.it/index.php/WP-olympus/article/view/18
+0.0,Quantitative observation of cyanobacteria and diatoms from space using PhytoDOAS on SCIAMACHY data,https://bg.copernicus.org/articles/6/751/2009/
+0.0,Obtaining phytoplankton diversity from ocean color: a scientific roadmap for future development,https://www.frontiersin.org/articles/10.3389/fmars.2017.00055/full
+0.0,The EnMAP imaging spectroscopy mission towards operations,https://www.sciencedirect.com/science/article/pii/S0034425723001839
+0.0,A consumer's guide to satellite remote sensing of multiple phytoplankton groups in the global ocean,https://www.frontiersin.org/articles/10.3389/fmars.2017.00041/full
+0.0,Satellite sensor requirements for monitoring essential biodiversity variables of coastal ecosystems,https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/eap.1682
+0.0,Natural variability or anthropogenically-induced variation? Insights from 15 years of multidisciplinary observations at the arctic marine LTER site...,https://www.sciencedirect.com/science/article/pii/S1470160X15005361
+0.0,GLORIA - A globally representative hyperspectral in situ dataset for optical sensing of water quality,https://www.nature.com/articles/s41597-023-01973-y
+0.0,Summertime plankton ecology in Fram Straitâ€”a compilation of long-and short-term observations,https://www.tandfonline.com/doi/abs/10.3402/polar.v34.23349
+0.0,Phytoplankton functional types from Space.,https://epic.awi.de/id/eprint/36000/
+0.0,Understanding the role of the biological pump in the global carbon cycle: an imperative for ocean science,https://www.jstor.org/stable/24862184

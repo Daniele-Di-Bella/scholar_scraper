@@ -98,7 +98,7 @@ def scrape(keywords, num_pages, most_recent):
 
 
 @click.command("search", help="Open the chosen articles in the browser")
-@click.argument("indices", nargs=-1)
+@click.argument("indices", type=click.INT, nargs=-1)
 def search(indices):
     current_dir = os.path.dirname(os.path.abspath(__file__))
     df = pd.read_csv(os.path.join(current_dir, "papers.txt"))
