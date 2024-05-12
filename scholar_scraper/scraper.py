@@ -6,6 +6,7 @@ import click
 
 import pandas as pd
 import requests
+from tqdm import tqdm
 from bs4 import BeautifulSoup
 from tabulate import tabulate
 
@@ -44,6 +45,7 @@ def scrape(keywords, num_pages, most_recent):
     for i in keywords:
         query = query + "+" + i
 
+    pbar = tqdm(total=num_pages)
     while page < num_pages:
         if most_recent:
             url = f"https://scholar.google.com/scholar?start={page * 10}&q={query}&hl=en&as_sdt=0,5&as_ylo={current_year}"
@@ -76,7 +78,9 @@ def scrape(keywords, num_pages, most_recent):
             papers.append({"Score": score, "Title": paper.format_title(), "Link": paper.link})
 
         page += 1
+        pbar.update(1)
 
+    pbar.close()
     current_dir = os.path.dirname(os.path.abspath(__file__))
     field_names = ["Score", "Title", "Link"]
 
