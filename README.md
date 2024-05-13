@@ -1,1 +1,48 @@
 # scholar_scraper
+
+## Overview
+
+scholar_scraper is a command-line interface (CLI) application designed to scrape academic papers and article from Google Scholar. 
+
+## Features
+
+- **Scraping**: Retrieve scholarly articles based on specified keywords and search criteria.
+- **Opening in browser**: 
+
+## Installation
+
+1. Clone this repository:
+
+   ```bash
+   pip install git+https://github.com/Daniele-Di-Bella/scholar_scraper.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd scholar-scraper-cli
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+1. Run the CLI app:
+
+   ```bash
+   scholar_scraper --help
+   ```
+
+2. Follow the prompts to input your search query and customize search parameters.
+
+## Contributing
+
+Contributions are welcome! If you have any ideas, bug fixes, or improvements, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
