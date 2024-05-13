@@ -17,18 +17,6 @@ scholar_scraper is a command-line interface (CLI) application designed to scrape
    pip install git+https://github.com/Daniele-Di-Bella/scholar_scraper.git
    ```
 
-2. Navigate to the project directory:
-
-   ```bash
-   cd scholar-scraper-cli
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
 ## Usage
 
 1. Run the CLI app:
