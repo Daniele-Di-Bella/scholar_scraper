@@ -34,3 +34,7 @@ Contributions are welcome! If you have any ideas, bug fixes, or improvements, fe
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+http://doi.org/10.5281/zenodo.889853
