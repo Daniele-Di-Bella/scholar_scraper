@@ -3,7 +3,7 @@ import os
 import webbrowser
 from datetime import datetime
 import click
-
+import arxivscraper
 import pandas as pd
 import requests
 from tqdm import tqdm
@@ -37,13 +37,13 @@ class scraped:
         return score
 
 
-@click.command("scrape", help="Launch the scraping activity on Google Scholar")
+@click.command("scholar", help="Launch the scraping activity on Google Scholar")
 @click.argument("keywords", nargs=-1)
 @click.option("-n", "--num_pages", type=click.INT, default=1, help="The number of Google Scholar "
                                                                    "pages that you want to scrape")
 @click.option("-m", "--most_recent", is_flag=True, help="If set on True, this option filter the "
                                                         "papers starting from the current year")
-def scrape(keywords, num_pages, most_recent):
+def scholar(keywords, num_pages, most_recent):
     """
     This command launch the scraping activity on the basis of a set of keywords specified by the user.
     The order in which the keywords are written matters.
@@ -120,8 +120,9 @@ def scrape(keywords, num_pages, most_recent):
     # print(df)
 
     headers = df.columns.tolist()
-    headers.insert(0, 'Index')
-    tabula = tabulate(df[["Score", "Author", "Title"]], headers=headers, showindex=True, colalign=("left", "left", "left", "left"),
+    headers.insert(0, "Index")
+    tabula = tabulate(df[["Score", "Author", "Title"]], headers=headers, showindex=True,
+                      colalign=("left", "left", "left", "left"),
                       tablefmt="simple", maxcolwidths=[5, 5, 10, 90])
 
     print(tabula)
@@ -135,3 +136,37 @@ def search(indices):
     for i in indices:
         webbrowser.open(df.iloc[i]['Link'])
     print("The papers you indicated were opened in the browser")
+
+
+@click.command("arxiv", help="Launch the scraping activity on arXiv")
+@click.argument("category")
+@click.argument("keywords", nargs=-1)
+def arxiv(category, keywords):
+    current_dateTime = datetime.now()
+    year = current_dateTime.year
+    month = current_dateTime.month
+    day = current_dateTime.day
+    str_dateTime = f"{year}-{month}-{day}"
+
+    scraper = arxivscraper.Scraper(category=category, date_until=str_dateTime,
+                                   filters={'title': keywords})
+    output = scraper.scrape()
+    print(output)
+
+    cols = ["id", "title", "categories", "abstract", "doi", "created", "updated", "authors"]
+    df = pd.DataFrame(output, columns=cols)
+    df.drop(["id", "abstract", "created", "updated"])
+
+    scores = []
+    for index, row in df.iterrows():
+        obj = scraped(row["authors"], row["title"], row["doi"])
+        scores.append(scraped.rating(obj.title, keywords))
+
+    df.insert(1, "Score", scores)
+
+    headers = ["Index", "Score", "Title", "Authors"]
+    tabula = tabulate(df[["Score", "title", "authors"]], headers=headers, showindex=True,
+                      colalign=("left", "left", "left", "left"),
+                      tablefmt="simple", maxcolwidths=[5, 5, 10, 90])
+
+    print(tabula)

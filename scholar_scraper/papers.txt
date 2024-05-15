@@ -1,1 +1,21 @@
 Score,Author,Title,Link
+100.0,L Guanter,The EnMAP spaceborne imaging spectroscopy mission for earth observation,https://www.mdpi.com/2072-4292/7/7/8830
+100.0,C Mielke,Potential applications of the Sentinel-2 multispectral sensor and the EnMap hyperspectral sensor in mineral exploration,https://www.academia.edu/download/50390383/POTENTIAL_APPLICATIONS_OF_THE_SENTINEL-220161117-458-wdv457.pdf
+100.0,H Kaufmann,Environmental mapping and analysis program (EnMAP)-Recent advances and status,https://ieeexplore.ieee.org/abstract/document/4779668/
+100.0,F Castaldi,Sampling strategies for soil property mapping using multispectral Sentinel-2 and hyperspectral EnMAP satellite data,https://www.mdpi.com/2072-4292/11/3/309
+100.0,T Stuffler,The EnMAP hyperspectral imager—An advanced optical payload for future applications in Earth observation programmes,https://www.sciencedirect.com/science/article/pii/S0094576507000288
+100.0,W Heldens,Can the future EnMAP mission contribute to urban applications? A literature survey,https://www.mdpi.com/2072-4292/3/9/1817
+100.0,K Segl,EeteS—The EnMAP end-to-end simulation tool,https://ieeexplore.ieee.org/abstract/document/6169955/
+200.0,S Van der Linden,The EnMAP-Box—A toolbox and application programming interface for EnMAP data processing,https://www.mdpi.com/2072-4292/7/9/11249
+100.0,A Okujeni,Berlin-urban-gradient dataset 2009-an enmap preparatory flight campaign,https://gfzpublic.gfz-potsdam.de/pubman/faces/ViewItemFullPage.jsp?itemId=item_1480927_5
+100.0,N Yokoya,Potential of resolution-enhanced hyperspectral data for mineral mapping using simulated EnMAP and Sentinel-2 images,https://www.mdpi.com/2072-4292/8/3/172
+100.0,T Storch,The EnMAP imaging spectroscopy mission towards operations,https://www.sciencedirect.com/science/article/pii/S0034425723001839
+100.0,L Guanter,ENMAP science plan,https://gfzpublic.gfz-potsdam.de/pubman/faces/ViewItemFullPage.jsp?itemId=item_1604890_3
+100.0,…,Science plan of the environmental mapping and analysis program (EnMAP),https://gfzpublic.gfz-potsdam.de/pubman/faces/ViewItemFullPage.jsp?itemId=item_1371146_7
+100.0,T Fruth,The EnMAP mission planning system,https://link.springer.com/chapter/10.1007/978-3-030-11536-4_18
+100.0,L Guanter,Simulation of optical remote-sensing scenes with application to the EnMAP hyperspectral mission,https://ieeexplore.ieee.org/abstract/document/4814515/
+100.0,H Kaufmann,EnMAP a hyperspectral sensor for environmental mapping and analysis,https://ieeexplore.ieee.org/abstract/document/4241564/
+100.0,B Sang,"The EnMAP hyperspectral imaging spectrometer: instrument concept, calibration, and technologies",https://www.spiedigitallibrary.org/conference-proceedings-of-spie/7086/708605/The-EnMAP-hyperspectral-imaging-spectrometer--instrument-concept-calibration-and/10.1117/12.794870.short
+100.0,A Steinberg,Prediction of common surface soil properties based on Vis-NIR airborne and simulated EnMAP imaging spectroscopy data: Prediction accuracy and influence...,https://www.mdpi.com/2072-4292/8/7/613
+100.0,A Clasen,"Spectral unmixing of forest crown components at close range, airborne and simulated Sentinel-2 and EnMAP spectral imaging scale",https://www.mdpi.com/2072-4292/7/11/15361
+100.0,C Mielke,EnGeoMAP 2.0—Automated hyperspectral mineral identification for the German EnMAP space mission,https://www.mdpi.com/2072-4292/8/2/127
