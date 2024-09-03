@@ -2,8 +2,8 @@
 
 ## Overview
 
-scholar_scraper is a command-line interface (CLI) application designed to scrape academic papers and articles 
-from Google Scholar. 
+`scholar_scraper` is a command-line interface (CLI) application designed to scrape academic papers and articles 
+from Google Scholar. I created it to practice with some python libraries like `BeautifulSoup`, `requests` and `Click`. I took this project as an occasion to put myself to test also with TOML and with the implementation of Google Gemini in a Python project.
 
 ## Features
 
