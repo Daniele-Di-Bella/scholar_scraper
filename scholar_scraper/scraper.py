@@ -2,21 +2,15 @@ import csv
 import os
 import webbrowser
 from datetime import datetime
-
 import click
+import google.generativeai as genai
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 from tabulate import tabulate
 from tqdm import tqdm
-import google.generativeai as genai
-
-genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
-
-model = genai.GenerativeModel(model_name="gemini-1.5-flash")
-response = model.generate_content(["What is in this photo?", img])
-print(response.text)
-
+from scholar_scraper.API import GeminiAPI
+import json
 
 
 class scraped:
@@ -61,6 +55,26 @@ class scraped:
         score = (N * 100) / len(keywords)
         return score
 
+    @staticmethod
+    def gemini_rating(f_title, keywords):
+        prompt = (f"Considering my interest in the topics {', '.join(keywords)}, how consistent is the "
+                  f"title '{f_title}' with these interests? Rate the consistency on a scale from 1 to 10, where 1 "
+                  f"means 'not consistent at all' and 10 means 'perfectly consistent'. Return only the number.")
+        genai.configure(api_key=GeminiAPI)
+        model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+
+        # Extract the score from Gemini's answer
+        try:
+            response = model.generate_content([prompt])
+            data = response.to_dict()
+            candidate = data['candidates'][0]
+            content = candidate['content']
+            parts = content['parts']
+            score = parts[0]['text']
+            return score
+        except (KeyError, TypeError) as e:
+            print(f"Error extracting score: {e}")
+
 
 @click.command("scholar", help="Launch the scraping activity on Google Scholar")
 @click.argument("keywords", nargs=-1)  # -1 indicates an unlimited number of values accepted
@@ -68,7 +82,11 @@ class scraped:
                                                                    "pages that you want to scrape")
 @click.option("-m", "--most_recent", is_flag=True, help="If set on True, this option filter the "
                                                         "papers starting from the current year")
-def scrape(keywords, num_pages, most_recent):
+@click.option("-s", "--scoring",
+              type=click.Choice(['arithmetic', 'gemini'], case_sensitive=False),
+              help="Specify the scoring method: 'arithmetic' or 'gemini'."
+              )
+def scrape(keywords, num_pages, most_recent, scoring):
     """
     This command launch the scraping activity on the basis of a set of keywords specified by the user.
     The order in which the keywords are written matters.
@@ -121,7 +139,12 @@ def scrape(keywords, num_pages, most_recent):
             author = result.find("div", class_="gs_a").text
 
             paper = scraped(author, title, link)
-            score = scraped.rating(paper.format_title(), keywords)
+            score = None
+
+            if scoring == "arithmetic":
+                score = scraped.rating(paper.format_title(), keywords)
+            if scoring == "gemini":
+                score = scraped.gemini_rating(paper.format_title(), keywords)
 
             papers.append({"Score": score, "Author": paper.format_author(), "Title": paper.format_title(),
                            "Link": paper.link})
@@ -154,7 +177,8 @@ def scrape(keywords, num_pages, most_recent):
     print(tabula)
 
 
-@click.command("search", help="Open some of the scraped articles in the browser by typing the index that is associated to it.")
+@click.command("search",
+               help="Open some of the scraped articles in the browser by typing the index that is associated to it.")
 @click.argument("indices", type=click.INT, nargs=-1)
 def search(indices):
     current_dir = os.path.dirname(os.path.abspath(__file__))

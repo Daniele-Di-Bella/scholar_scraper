@@ -8,3 +8,42 @@ Score,Author,Title,Link
 50.0,KKE Wolf,Resilience by diversity: Large intraspecific differences in climate change responses of an Arctic diatom,https://aslopubs.onlinelibrary.wiley.com/doi/abs/10.1002/lno.10639
 100.0,D Croteau,Contrasting nonphotochemical quenching patterns under high light and darkness aligns with light niche occupancy in Arctic diatoms,https://aslopubs.onlinelibrary.wiley.com/doi/abs/10.1002/lno.11587
 100.0,K Rühland,Paleolimnological evidence from diatoms for recent environmental changes in 50 lakes across Canadian Arctic treeline,https://www.tandfonline.com/doi/full/10.1657/1523-0430(2003)035[0110:PEFDFR]2.0.CO;2
+100.0,E Leu,Ultraviolet radiation negatively affects growth but not food quality of arctic diatoms,https://aslopubs.onlinelibrary.wiley.com/doi/abs/10.4319/lo.2007.52.2.0787
+100.0,AF Lotter,Diatoms as indicators of environmental change near arctic and alpine treeline,https://books.google.com/books?hl=en&lr=&id=bz6UWRbwzHwC&oi=fnd&pg=PA205&dq=+arctic+diatoms&ots=5H_TsVCPdA&sig=rRwUQcK0KqPmZiL55XoUXBCfvQc
+50.0,M Kahlert,Biodiversity patterns of Arctic diatom assemblages in lakes and streams: Current reference conditions and historical context for biomonitoring,https://onlinelibrary.wiley.com/doi/abs/10.1111/fwb.13490
+100.0,WS Grant,"GROWTH RESPONSES TO SALINITY VARIATION IN FOUR ARCTIC ICE DIATOMS1,2",https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1529-8817.1976.tb00498.x
+100.0,MSV DOUGLAS,10 Freshwater diatoms as indicators of environmental change in the High Arctic,https://books.google.com/books?hl=en&lr=&id=bz6UWRbwzHwC&oi=fnd&pg=PA227&dq=+arctic+diatoms&ots=5H_TsVCPdA&sig=A8RwLcifcN9gYenWWULMafrIoks
+100.0,D Antoniades,Quantitative estimates of recent environmental changes in the Canadian High Arctic inferred from diatoms in lake and pond sediments,https://link.springer.com/article/10.1007/s10933-004-6611-3
+50.0,KR Stoof‐Leichsenring,Phylogenetic diversity and environment form assembly rules for Arctic diatom genera—A study on recent and ancient sedimentary DNA,https://onlinelibrary.wiley.com/doi/abs/10.1111/jbi.13786
+100.0,CE Stickley,Evidence for middle Eocene Arctic sea ice from diatoms and ice-rafted debris,https://www.nature.com/articles/nature08163
+100.0,WH van de Poll,Taxon‐specific dark survival of diatoms and flagellates affects Arctic phytoplankton composition during the polar night and early spring,https://aslopubs.onlinelibrary.wiley.com/doi/abs/10.1002/lno.11355
+100.0,L Šupraha,Diversity and biogeography of planktonic diatoms in Svalbard fjords: The role of dispersal and Arctic endemism in phytoplankton community structuring,https://online.ucpress.edu/elementa/article-abstract/10/1/00117/190684
+50.0,CH Von Quillfeldt - 2000 - degruyter.com,Common diatom species in Arctic spring blooms: their distribution and abundance,https://www.degruyter.com/document/doi/10.1515/BOT.2000.050/html
+100.0,R Gudmundsdottir,Diatoms as indicators: the influences of experimental nitrogen enrichment on diatom assemblages in sub-Arctic streams,https://www.sciencedirect.com/science/article/pii/S1470160X13001210
+100.0,OV Palagushkina,Diatoms of modern bottom sediments in Siberian Arctic,https://link.springer.com/article/10.1134/S1995425512040105
+100.0,RN Glud,"Benthic diatoms of a high Arctic fjord (Young Sound, NE Greenland): importance for ecosystem primary production",https://www.int-res.com/abstracts/meps/v238/p15-29
+100.0,DO Hessen,UV radiation and its effects on P-uptake in arctic diatoms,https://www.sciencedirect.com/science/article/pii/S0022098111004849
+100.0,C Krembs,High concentrations of exopolymeric substances in Arctic winter sea ice: implications for the polar ocean carbon cycle and cryoprotection of diatoms,https://www.sciencedirect.com/science/article/pii/S096706370200122X
+50.0,S Sorvari,Lake diatom response to recent Arctic warming in Finnish Lapland,https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2486.2002.00463.x
+100.0,H Meguro,Diatoms and the ecological conditions of their growth in sea ice in the Arctic Ocean,https://www.science.org/doi/abs/10.1126/science.152.3725.1089
+50.0,MSV Douglas,PERIPHYTIC DIATOM ASSEMBLAGES FROM HIGH ARCTIC PONDS1,https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0022-3646.1995.00060.x
+50.0,NJ Anderson - European Journal of Phycology,"Diatoms, temperature and climatic change",https://www.cambridge.org/core/journals/european-journal-of-phycology/article/diatoms-temperature-and-climatic-change/6B641F2CD12C1AD5B0AF4419F6130A14
+50.0,CH Von Quillfeldt - 2001 - degruyter.com,Identification of some easily confused common diatom species in Arctic spring blooms,https://www.degruyter.com/document/doi/10.1515/BOT.2001.048/html
+100.0,FT Fang,Short-term sedimentary evidence for increasing diatoms in Arctic fjords in a warming world,https://www.sciencedirect.com/science/article/pii/S0048969724059138
+50.0,G Bouchard,Freshwater diatom biogeography in the Canadian Arctic Archipelago,https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1365-2699.2004.01143.x
+50.0,J Weckström,"Patterns in the distribution, composition and diversity of diatom assemblages in relation to ecoclimatic factors in Arctic Lapland",https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2699.2001.00537.x
+100.0,M Levasseur,A new source of dimethylsulfide (DMS) for the arctic atmosphere: ice diatoms,https://link.springer.com/article/10.1007/BF00346748
+100.0,KM Rühland,FRESHWATER DIATOMS FROM THE CANADIAN ARCTIC TREELINE AND DEVELOPMENT OF PALEOLIMNOLOGICAL INFERENCE MODELS1,https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1529-8817.2002.01129.x
+100.0,KKE Wolf,Pelagic and ice‐associated microalgae under elevated light and pCO2: Contrasting physiological strategies in two Arctic diatoms,https://aslopubs.onlinelibrary.wiley.com/doi/abs/10.1002/lno.12174
+50.0,KKE Wolf,Company matters: The presence of other genotypes alters traits and intraspecific selection in an Arctic diatom under climate change,https://onlinelibrary.wiley.com/doi/abs/10.1111/gcb.14675
+50.0,CA Paul,"Diatom-inferred climatic and environmental changes over the last∼ 9000 years from a low Arctic (Nunavut, Canada) tundra lake",https://www.sciencedirect.com/science/article/pii/S0031018210001021
+50.0,BE Keatley,Prolonged ice cover dampens diatom community responses to recent climatic change in High Arctic lakes,https://www.tandfonline.com/doi/full/10.1657/1523-0430(06-068)[KEATLEY]2.0.CO;2
+50.0,AC Kvernvik,Higher sensitivity towards light stress and ocean acidification in an Arctic sea‐ice‐associated diatom compared to a pelagic diatom,https://nph.onlinelibrary.wiley.com/doi/abs/10.1111/nph.16501
+50.0,N Michelutti,"Diatom response to recent climatic change in a high arctic lake (Char Lake, Cornwallis Island, Nunavut)",https://www.sciencedirect.com/science/article/pii/S0921818102002606
+100.0,DSS Lim,"Diatoms and their relationship to environmental variables from lakes and ponds on Bathurst Island, Nunavut, Canadian High Arctic",https://link.springer.com/article/10.1023/A:1017553112643
+100.0,L Pautova,Phytoplankton of the High-Latitude Arctic: Intensive Growth Large Diatoms Porosira glacialis in the Nansen Basin,https://www.mdpi.com/2077-1312/11/2/453
+100.0,K Stachura-Suchoples,Contribution towards a morphological and molecular taxonomic reference library of benthic marine diatoms from two Arctic fjords on Svalbard (Norway),https://link.springer.com/article/10.1007/s00300-015-1683-2
+100.0,A Limoges,Spring Succession and Vertical Export of Diatoms and IP25 in a Seasonally Ice-Covered High Arctic Fjord,https://www.frontiersin.org/articles/10.3389/feart.2018.00226/full
+50.0,M Poulin,The pan-Arctic biodiversity of marine pelagic and sea-ice unicellular eukaryotes: a first-attempt assessment,https://link.springer.com/article/10.1007/s12526-010-0058-8
+100.0,M Poulin - Journal of Phycology,SEA ICE DIATOMS (BACILLARIOPHYCEAE) OF THE CANADIAN ARCTIC. I. THE GENUS STENONEIS1,https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0022-3646.1990.00156.x
+100.0,D Antoniades,Biogeographic distributions and environmental controls of stream diatoms in the Canadian Arctic Archipelago,https://cdnsciencepub.com/doi/abs/10.1139/B09-001
