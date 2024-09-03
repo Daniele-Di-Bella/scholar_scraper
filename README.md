@@ -23,14 +23,15 @@ from Google Scholar.
 1. Run the CLI app:
 
    ```bash
-   scholar_scraper --help
+   scrape --help
    ```
 
 2. Follow the prompts to input your search query and customize search parameters.
 
 ## Contributing
 
-Contributions are welcome! If you have any ideas, bug fixes, or improvements, feel free to open an issue or submit a pull request.
+Contributions are welcome! If you have any ideas, bug fixes, or improvements, feel free to open an issue 
+or submit a pull request. 
 
 ## License
 

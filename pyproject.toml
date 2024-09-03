@@ -14,4 +14,4 @@ dynamic = ["dependencies"]
 dependencies = {file = ["requirements.txt"]}
 
 [project.scripts]
-scrape = "scholar_scraper.main:cli"
+scholar_scraper = "scholar_scraper.main:cli"

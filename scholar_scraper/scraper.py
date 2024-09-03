@@ -2,13 +2,21 @@ import csv
 import os
 import webbrowser
 from datetime import datetime
+
 import click
-import arxivscraper
 import pandas as pd
 import requests
-from tqdm import tqdm
 from bs4 import BeautifulSoup
 from tabulate import tabulate
+from tqdm import tqdm
+import google.generativeai as genai
+
+genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+
+model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+response = model.generate_content(["What is in this photo?", img])
+print(response.text)
+
 
 
 class scraped:
@@ -60,7 +68,7 @@ class scraped:
                                                                    "pages that you want to scrape")
 @click.option("-m", "--most_recent", is_flag=True, help="If set on True, this option filter the "
                                                         "papers starting from the current year")
-def scholar(keywords, num_pages, most_recent):
+def scrape(keywords, num_pages, most_recent):
     """
     This command launch the scraping activity on the basis of a set of keywords specified by the user.
     The order in which the keywords are written matters.
@@ -146,7 +154,7 @@ def scholar(keywords, num_pages, most_recent):
     print(tabula)
 
 
-@click.command("search", help="Open the chosen articles in the browser by typing the index that is associated to it.")
+@click.command("search", help="Open some of the scraped articles in the browser by typing the index that is associated to it.")
 @click.argument("indices", type=click.INT, nargs=-1)
 def search(indices):
     current_dir = os.path.dirname(os.path.abspath(__file__))
