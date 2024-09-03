@@ -2,7 +2,8 @@
 
 ## Overview
 
-scholar_scraper is a command-line interface (CLI) application designed to scrape academic papers and article from Google Scholar. 
+scholar_scraper is a command-line interface (CLI) application designed to scrape academic papers and articles 
+from Google Scholar. 
 
 ## Features
 
@@ -34,3 +35,7 @@ Contributions are welcome! If you have any ideas, bug fixes, or improvements, fe
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+Mahdi Sadjadi (2017). arxivscraper: Zenodo. http://doi.org/10.5281/zenodo.889853

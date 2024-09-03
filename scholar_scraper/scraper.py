@@ -12,12 +12,19 @@ from tabulate import tabulate
 
 
 class scraped:
+    """
+    This class is meant to make it easier to retrieve relevant information from the scraped elements.
+    """
+
     def __init__(self, author, title, link):
         self.author = author
         self.title = title
         self.link = link
 
     def format_title(self):
+        """
+        :return: as a str the title of a scraped paper without any disturbing spaces or elements.
+        """
         var = self.title.replace("…\xa0and", "...")
         var = var.replace("\xa0…", "...")
         var = var.rstrip()
@@ -25,11 +32,21 @@ class scraped:
         return var
 
     def format_author(self):
+        """
+        :return: as a str the author of a scraped paper.
+        """
         x = self.author.split(",")
         return x[0]
 
     @staticmethod
     def rating(f_title, keywords: list):
+        """
+        To a scraped paper, this function assigns a score that defines how much the paper can potentially
+        be useful for the user.
+        :param f_title: (str) the formatted title of a scraped paper.
+        :param keywords: (list) a list of strings representing the user's topics of interest.
+        :return: (int) the score assigned to a scraped paper.
+        """
         keywords_l = [element.lower() for element in keywords]
         f_title = f_title.lower()
         N = sum(f_title.count(element) for element in keywords_l)
@@ -38,7 +55,7 @@ class scraped:
 
 
 @click.command("scholar", help="Launch the scraping activity on Google Scholar")
-@click.argument("keywords", nargs=-1)
+@click.argument("keywords", nargs=-1)  # -1 indicates an unlimited number of values accepted
 @click.option("-n", "--num_pages", type=click.INT, default=1, help="The number of Google Scholar "
                                                                    "pages that you want to scrape")
 @click.option("-m", "--most_recent", is_flag=True, help="If set on True, this option filter the "
@@ -70,7 +87,7 @@ def scholar(keywords, num_pages, most_recent):
             response.raise_for_status()
         except requests.RequestException as e:
             print()  # Just to detach the error signal from the tqdm progress bar
-            print("An error occurred during a request to Google Scholar, the", e)
+            print("An error occurred during a request to Google Scholar:", e)
             return
 
         soup = BeautifulSoup(response.content, "html.parser")
@@ -107,11 +124,12 @@ def scholar(keywords, num_pages, most_recent):
 
     print("The request(s) to Google Scholar was/were successful")
 
-    current_dir = os.path.dirname(os.path.abspath(__file__))
+    current_dir = os.path.dirname(os.path.abspath(__file__))  # finds the directory in which this script is executed
     field_names = ["Score", "Author", "Title", "Link"]
 
     with open(os.path.join(current_dir, "papers.txt"), "w", encoding="utf-8") as file:
-        writer = csv.DictWriter(file, fieldnames=field_names)
+        writer = csv.DictWriter(file, fieldnames=field_names)  # fieldnames specifies the order in which the
+        # columns are written in the CSV file.
         writer.writeheader()
         writer.writerows(papers)
 
@@ -129,7 +147,8 @@ def scholar(keywords, num_pages, most_recent):
 
 
 @click.command("search", help="Open the chosen articles in the browser")
-@click.argument("indices", type=click.INT, nargs=-1)
+@click.argument("indices", type=click.INT, nargs=-1, help="To open a paper in you browser, select it"
+                                                          "by typing the index that is associated to it.")
 def search(indices):
     current_dir = os.path.dirname(os.path.abspath(__file__))
     df = pd.read_csv(os.path.join(current_dir, "papers.txt"))
@@ -138,6 +157,8 @@ def search(indices):
     print("The papers you indicated were opened in the browser")
 
 
+# This function is based on the work of Mahdi Sadjadi. For more info check the "Acknowledgments"
+# section of the README.md file.
 @click.command("arxiv", help="Launch the scraping activity on arXiv")
 @click.argument("category")
 @click.argument("keywords", nargs=-1)
@@ -151,10 +172,11 @@ def arxiv(category, keywords):
     scraper = arxivscraper.Scraper(category=category, date_until=str_dateTime,
                                    filters={'title': keywords})
     output = scraper.scrape()
-    print(output)
+    # print(type(output))
 
-    cols = ["id", "title", "categories", "abstract", "doi", "created", "updated", "authors"]
+    cols = ("id", "title", "categories", "abstract", "doi", "created", "updated", "authors")
     df = pd.DataFrame(output, columns=cols)
+    print(df)
     df.drop(["id", "abstract", "created", "updated"])
 
     scores = []
