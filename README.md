@@ -23,7 +23,7 @@ from Google Scholar. I created it to practice with some python libraries like `B
 1. Run the CLI app:
 
    ```bash
-   scrape --help
+   scholar_scraper --help
    ```
 
 2. Follow the prompts to input your search query and customize search parameters.
