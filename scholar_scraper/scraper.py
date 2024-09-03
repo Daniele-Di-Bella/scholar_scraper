@@ -146,9 +146,8 @@ def scholar(keywords, num_pages, most_recent):
     print(tabula)
 
 
-@click.command("search", help="Open the chosen articles in the browser")
-@click.argument("indices", type=click.INT, nargs=-1, help="To open a paper in you browser, select it"
-                                                          "by typing the index that is associated to it.")
+@click.command("search", help="Open the chosen articles in the browser by typing the index that is associated to it.")
+@click.argument("indices", type=click.INT, nargs=-1)
 def search(indices):
     current_dir = os.path.dirname(os.path.abspath(__file__))
     df = pd.read_csv(os.path.join(current_dir, "papers.txt"))
@@ -172,7 +171,6 @@ def arxiv(category, keywords):
     scraper = arxivscraper.Scraper(category=category, date_until=str_dateTime,
                                    filters={'title': keywords})
     output = scraper.scrape()
-    # print(type(output))
 
     cols = ("id", "title", "categories", "abstract", "doi", "created", "updated", "authors")
     df = pd.DataFrame(output, columns=cols)
