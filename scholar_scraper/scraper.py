@@ -154,39 +154,3 @@ def search(indices):
     for i in indices:
         webbrowser.open(df.iloc[i]['Link'])
     print("The papers you indicated were opened in the browser")
-
-
-# This function is based on the work of Mahdi Sadjadi. For more info check the "Acknowledgments"
-# section of the README.md file.
-@click.command("arxiv", help="Launch the scraping activity on arXiv")
-@click.argument("category")
-@click.argument("keywords", nargs=-1)
-def arxiv(category, keywords):
-    current_dateTime = datetime.now()
-    year = current_dateTime.year
-    month = current_dateTime.month
-    day = current_dateTime.day
-    str_dateTime = f"{year}-{month}-{day}"
-
-    scraper = arxivscraper.Scraper(category=category, date_until=str_dateTime,
-                                   filters={'title': keywords})
-    output = scraper.scrape()
-
-    cols = ("id", "title", "categories", "abstract", "doi", "created", "updated", "authors")
-    df = pd.DataFrame(output, columns=cols)
-    print(df)
-    df.drop(["id", "abstract", "created", "updated"])
-
-    scores = []
-    for index, row in df.iterrows():
-        obj = scraped(row["authors"], row["title"], row["doi"])
-        scores.append(scraped.rating(obj.title, keywords))
-
-    df.insert(1, "Score", scores)
-
-    headers = ["Index", "Score", "Title", "Authors"]
-    tabula = tabulate(df[["Score", "title", "authors"]], headers=headers, showindex=True,
-                      colalign=("left", "left", "left", "left"),
-                      tablefmt="simple", maxcolwidths=[5, 5, 10, 90])
-
-    print(tabula)

@@ -35,7 +35,3 @@ Contributions are welcome! If you have any ideas, bug fixes, or improvements, fe
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-Mahdi Sadjadi (2017). arxivscraper: Zenodo. http://doi.org/10.5281/zenodo.889853
