@@ -2,6 +2,7 @@ import csv
 import os
 import webbrowser
 from datetime import datetime
+
 import click
 import google.generativeai as genai
 import pandas as pd
@@ -10,7 +11,6 @@ from bs4 import BeautifulSoup
 from tabulate import tabulate
 from tqdm import tqdm
 from scholar_scraper.API import GeminiAPI
-import json
 
 
 class scraped:
