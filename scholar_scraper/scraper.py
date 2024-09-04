@@ -10,7 +10,6 @@ import requests
 from bs4 import BeautifulSoup
 from tabulate import tabulate
 from tqdm import tqdm
-from scholar_scraper.API import GeminiAPI
 
 
 class scraped:
@@ -60,7 +59,8 @@ class scraped:
         prompt = (f"Considering my interest in the topics {', '.join(keywords)}, how consistent is the "
                   f"title '{f_title}' with these interests? Rate the consistency on a scale from 1 to 10, where 1 "
                   f"means 'not consistent at all' and 10 means 'perfectly consistent'. Return only the number.")
-        genai.configure(api_key=GeminiAPI)
+        API_key = os.getenv("GeminiAPI")
+        genai.configure(api_key=API_key)
         model = genai.GenerativeModel(model_name="gemini-1.5-flash")
 
         # Extract the score from Gemini's answer
