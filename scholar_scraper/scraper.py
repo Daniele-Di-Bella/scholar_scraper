@@ -69,7 +69,7 @@ class scraped:
     @staticmethod
     def gemini_rating(f_title, keywords):
         prompt = (f"Considering my interest in the topics {', '.join(keywords)}, how consistent is the "
-                  f"title '{f_title}' with these interests? Rate the consistency on a scale from 1 to 10, where 1 "
+                  f"title '{f_title}' with these interests? Rate it on a scale from 1 to 10, where 1 "
                   f"means 'not consistent at all' and 10 means 'perfectly consistent'. Return only the number.")
         API_key = os.getenv("GeminiAPI")
         genai.configure(api_key=API_key)
@@ -135,7 +135,6 @@ def scrape(keywords, num_pages, most_recent, scoring):
 
     pbar = tqdm(total=num_pages)  # Graphical progression bar, to report to the user how much time is left
     # before the end of the scraping operation
-
     while page < num_pages:
         if most_recent:
             url = f"https://scholar.google.com/scholar?start={page * 10}&q={query}&hl=en&as_sdt=0,5&as_ylo={current_year}"
@@ -182,6 +181,14 @@ def scrape(keywords, num_pages, most_recent, scoring):
 
             papers.append({"Score": score, "Author": paper.format_author(), "Title": paper.format_title(),
                            "Link": paper.link})
+
+        if scoring == "gemini" and num_pages != 1:
+            print(f"The input tokens you used today are {sum_today_tokens()}/1048576.\n"
+                  f"Remaining today: {1048576 - sum_today_tokens()}")
+            user_input = input("You have results for 10 papers: do you want to continue with another"
+                               "10? (y/n): ")
+            if user_input.lower() != 'y':
+                break
 
         page += 1
         pbar.update(1)
