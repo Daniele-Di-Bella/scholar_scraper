@@ -44,7 +44,12 @@ class scraped:
         :return: as a str the author of a scraped paper.
         """
         x = self.author.split(",")
-        return x[0]
+        # print(x)
+        author = x[0]
+        cleaned_author = author.replace('\xa0', ' ').strip()
+        name = cleaned_author.split(" -")[0]
+        # print(name)
+        return name
 
     @staticmethod
     def rating(f_title, keywords: list):

@@ -1,21 +1,11 @@
 Score,Author,Title,Link
-"9 
-",S Gong,Tectonic proteins are important players in non-motile ciliopathies,https://karger.com/cpb/article-abstract/50/1/398/76458
-"9 
-",HM Truong,The tectonic complex regulates membrane protein composition in the photoreceptor cilium,https://www.nature.com/articles/s41467-023-41450-z
-"9 
-",Y Hashimoto,Nanogel tectonics for tissue engineering: protein delivery systems with nanogel chaperones,https://onlinelibrary.wiley.com/doi/abs/10.1002/adhm.201800729
-"9 
-",JF Reiter,"Tectonic, a novel regulator of the Hedgehog pathway required for both activation and inhibition",https://genesdev.cshlp.org/content/20/1/22.short
-"5 
-",VC Thakur,Tectonics of the region of Eastern Himalayan syntaxis,https://www.jstor.org/stable/24078227
-"3 
-",RD Cummings - Proceedings of the National Academy of …,If it is methylated it must be Tectonic,https://www.pnas.org/doi/abs/10.1073/pnas.1408652111
-"9 
-",S Lou,Peptide Tectonics: Encoded Structural Complementarity Dictates Programmable Self‐Assembly,https://onlinelibrary.wiley.com/doi/abs/10.1002/advs.201802043
-"7 
-",M Fleming,Genome Tectonics: Linking Dynamic Genome Organization with Cellular Nutrients,https://karger.com/lfg/article/16/1/21/835563
-"8 
-",U Schreiber,Hypothesis: Origin of life in deep-reaching tectonic faults,https://link.springer.com/article/10.1007/s11084-012-9267-4
-"8 
-",SB Hedges - Proceedings of the National Academy of …,Afrotheria: Plate tectonics meets genomics,https://www.pnas.org/doi/abs/10.1073/pnas.98.1.1
+100.0,S Gong,Tectonic proteins are important players in non-motile ciliopathies,https://karger.com/cpb/article-abstract/50/1/398/76458
+100.0,HM Truong,The tectonic complex regulates membrane protein composition in the photoreceptor cilium,https://www.nature.com/articles/s41467-023-41450-z
+100.0,Y Hashimoto,Nanogel tectonics for tissue engineering: protein delivery systems with nanogel chaperones,https://onlinelibrary.wiley.com/doi/abs/10.1002/adhm.201800729
+50.0,JF Reiter,"Tectonic, a novel regulator of the Hedgehog pathway required for both activation and inhibition",https://genesdev.cshlp.org/content/20/1/22.short
+50.0,VC Thakur,Tectonics of the region of Eastern Himalayan syntaxis,https://www.jstor.org/stable/24078227
+50.0,RD Cummings,If it is methylated it must be Tectonic,https://www.pnas.org/doi/abs/10.1073/pnas.1408652111
+50.0,S Lou,Peptide Tectonics: Encoded Structural Complementarity Dictates Programmable Self‐Assembly,https://onlinelibrary.wiley.com/doi/abs/10.1002/advs.201802043
+50.0,M Fleming,Genome Tectonics: Linking Dynamic Genome Organization with Cellular Nutrients,https://karger.com/lfg/article/16/1/21/835563
+50.0,U Schreiber,Hypothesis: Origin of life in deep-reaching tectonic faults,https://link.springer.com/article/10.1007/s11084-012-9267-4
+50.0,SB Hedges,Afrotheria: Plate tectonics meets genomics,https://www.pnas.org/doi/abs/10.1073/pnas.98.1.1
