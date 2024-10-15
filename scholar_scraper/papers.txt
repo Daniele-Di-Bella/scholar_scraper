@@ -1,21 +1,21 @@
 Score,Author,Title,Link
 "9 
+",FR Garcia-Gonzalo,A transition zone complex regulates mammalian ciliogenesis and ciliary membrane composition,https://www.nature.com/articles/ng.891
+"9 
+",S Dean,Cilium transition zone proteome reveals compartmentalization and differential dynamics of ciliopathy complexes,https://www.pnas.org/doi/abs/10.1073/pnas.1604258113
+"9 
 ",HM Truong,The tectonic complex regulates membrane protein composition in the photoreceptor cilium,https://www.nature.com/articles/s41467-023-41450-z
 "9 
 ",HM Truong,Tectonic Complex Impedes Diffusion through the Ciliary Transition Zone to Ensure Proper Sorting of Membrane Proteins,https://www.biorxiv.org/content/10.1101/2023.05.13.540647.abstract
 "9 
-",FR Garcia-Gonzalo,A transition zone complex regulates mammalian ciliogenesis and ciliary membrane composition,https://www.nature.com/articles/ng.891
+",X Shi,Super-resolution microscopy reveals that disruption of ciliary transition-zone architecture causes Joubert syndrome,https://www.nature.com/articles/ncb3599
 "9 
-",NJ Planavsky,"Late Proterozoic transitions in climate, oxygen, and tectonics, and the rise of complex life",https://people.earth.yale.edu/sites/default/files/files/Planavsky/47_%20Planavsky%20et%20al%202015%20PSSC.pdf
-"7 
-",K Szymanska,The transition zone: an essential functional compartment of cilia,https://link.springer.com/article/10.1186/2046-2530-1-10
-"8 
-",S Gong,Tectonic proteins are important players in non-motile ciliopathies,https://karger.com/cpb/article-abstract/50/1/398/76458
-"8 
-",DM Belnap,Molecular tectonic model of virus structural transitions: the putative cell entry states of poliovirus,https://journals.asm.org/doi/abs/10.1128/jvi.74.3.1342-1354.2000
-"8 
-",U Schreiber,Hypothesis: Origin of life in deep-reaching tectonic faults,https://link.springer.com/article/10.1007/s11084-012-9267-4
+",B Chih,A ciliopathy complex at the transition zone protects the cilia as a privileged membrane domain,https://www.nature.com/articles/ncb2410
 "9 
-",S Dean,Cilium transition zone proteome reveals compartmentalization and differential dynamics of ciliopathy complexes,https://www.pnas.org/doi/abs/10.1073/pnas.1604258113
+",SE Conduit,Superresolution microscopy reveals distinct phosphoinositide subdomains within the cilia transition zone,https://www.frontiersin.org/articles/10.3389/fcell.2021.634649/full
 "9 
-",M Matabos,Faunal changes and geographic crypticism indicate the occurrence of a biogeographic transition zone along the southern East Pacific Rise,https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1365-2699.2010.02418.x
+",J Gonçalves,The ciliary transition zone: finding the pieces and assembling the gate,https://www.sciencedirect.com/science/article/pii/S1016847823006076
+"9 
+",K Park,"Composition, organization and mechanisms of the transition zone, a gate for the cilium",https://www.embopress.org/doi/abs/10.15252/embr.202255420
+"9 
+",D Diener,The ciliary transition zone,https://www.sciencedirect.com/science/article/pii/B9780128225080000071

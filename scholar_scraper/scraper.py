@@ -186,7 +186,7 @@ def scrape(keywords, num_pages, most_recent, scoring):
             print(f"The input tokens you used today are {sum_today_tokens()}/1048576.\n"
                   f"Remaining today: {1048576 - sum_today_tokens()}")
             user_input = input("You have results for 10 papers: do you want to continue with another"
-                               "10? (y/n): ")
+                               " 10? (y/n): ")
             if user_input.lower() != 'y':
                 break
 
