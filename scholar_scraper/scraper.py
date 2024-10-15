@@ -64,7 +64,8 @@ class scraped:
         model = genai.GenerativeModel(model_name="gemini-1.5-flash")
 
         # Token count
-        tokens = model.count_tokens(prompt)
+        response = model.count_tokens(prompt)
+        tokens = response.total_tokens
 
         # Extract the score from Gemini's answer
         try:

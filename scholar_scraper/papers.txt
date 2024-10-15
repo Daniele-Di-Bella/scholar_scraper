@@ -1,50 +1,21 @@
 Score,Author,Title,Link
-100.0,JN Onuchic,Theory of protein folding,https://www.sciencedirect.com/science/article/pii/S0959440X04000107
-100.0,KA Dill,The protein folding problem,https://www.annualreviews.org/content/journals/10.1146/annurev.biophys.37.092707.153558
-100.0,KA Dill,"The protein-folding problem, 50 years on",https://www.science.org/doi/abs/10.1126/science.1219021
-100.0,TE Creighton - Biochemical journal,Protein folding.,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1131670/
-150.0,CM Dobson - Nature,Protein folding and misfolding,https://www.nature.com/articles/nature02261
-100.0,ID Kuntz - Journal of the American Chemical Society,Protein folding,https://pubs.acs.org/doi/pdf/10.1021/ja00766a060
-100.0,V Grantcharova,Mechanisms of protein folding,https://www.sciencedirect.com/science/article/pii/S0959440X00001767
-100.0,V Daggett - Chemical reviews,Protein folding− simulation,https://pubs.acs.org/doi/full/10.1021/cr0404242
-100.0,MG Rossmann,Protein folding,https://pubmed.ncbi.nlm.nih.gov/7023364/
-100.0,D Thirumalai,Theoretical perspectives on protein folding,https://www.annualreviews.org/content/journals/10.1146/annurev-biophys-051309-103835
-100.0,EE Lattman,Protein folding--what's the question?,https://www.pnas.org/doi/abs/10.1073/pnas.90.2.439
-100.0,M Gruebele - Annual review of physical chemistry,The fast protein folding problem,https://www.annualreviews.org/content/journals/10.1146/annurev.physchem.50.1.485
-100.0,AV Finkelstein,Physics of protein folding,https://www.sciencedirect.com/science/article/pii/S1571064504000053
-100.0,FM Richards - Scientific American,The protein folding problem,https://www.jstor.org/stable/24936754
-100.0,RL Baldwin - Trends in biochemical sciences,How does protein folding get started?,https://www.cell.com/trends/biochemical-sciences/pdf/0968-0004(89)90067-4.pdf
-100.0,SW Englander,The nature of protein folding pathways,https://www.pnas.org/doi/abs/10.1073/pnas.1411798111
-150.0,RD Schaeffer,Protein folds and protein folding,https://academic.oup.com/peds/article-abstract/24/1-2/11/1472744
-200.0,R Seckler,Protein folding and protein refolding,https://faseb.onlinelibrary.wiley.com/doi/abs/10.1096/fasebj.6.8.1592207
-50.0,AS˘ ali,How does a protein fold?,https://www.nature.com/articles/369248a0
-100.0,AL Fink - Physiological reviews,Chaperone-mediated protein folding,https://journals.physiology.org/doi/abs/10.1152/physrev.1999.79.2.425
-100.0,JK Myers,Mechanisms of fast protein folding,https://www.annualreviews.org/content/journals/10.1146/annurev.biochem.71.110601.135346
-100.0,B Nölting,Mechanism of protein folding,https://onlinelibrary.wiley.com/doi/abs/10.1002/1097-0134(20001115)41:3%3C288::AID-PROT20%3E3.0.CO;2-C
-100.0,MJ Gething,Protein folding in the cell,https://www.nature.com/articles/355033a0
-100.0,HS Chan,The protein folding problem,https://pubs.aip.org/physicstoday/article-abstract/46/2/24/407323
-150.0,SW Englander,Protein folding and misfolding: mechanism and principles,https://www.cambridge.org/core/journals/quarterly-reviews-of-biophysics/article/protein-folding-and-misfolding-mechanism-and-principles/559881F7B3AD6EE6B6B0B74BB335AAB6
-100.0,A Berry - Biochemical Society Symposia,Protein folding and its links with human disease,https://portlandpress.com/biochemsocsymp/article-abstract/doi/10.1042/bss0680001/49955
-100.0,RW Ruddon,Assisted protein folding,https://www.jbc.org/article/S0021-9258(19)78352-5/fulltext
-100.0,WA Eaton,Fast kinetics and mechanisms in protein folding,https://www.annualreviews.org/content/journals/10.1146/annurev.biophys.29.1.327
-100.0,C Levinthal - Journal de chimie physique,Are there pathways for protein folding?,https://jcp.edpsciences.org/articles/jcp/abs/1968/01/jcp196865p44/jcp196865p44.html
-100.0,M Karplus,Protein-folding dynamics,https://www.nature.com/articles/260404a0
-100.0,KA Dill,The protein folding problem: when will it be solved?,https://www.sciencedirect.com/science/article/pii/S0959440X07000772
-150.0,RL Baldwin - Annu. Rev. Biophys.,The search for folding intermediates and the mechanism of protein folding,https://www.annualreviews.org/content/journals/10.1146/annurev.biophys.37.032807.125948
-100.0,F Rao,The protein folding network,https://www.sciencedirect.com/science/article/pii/S0022283604007521
-100.0,KA Dill,Principles of protein folding—a perspective from simple exact models,https://onlinelibrary.wiley.com/doi/abs/10.1002/pro.5560040401
-100.0,KA Dill - Biochemistry,Dominant forces in protein folding,https://pubs.acs.org/doi/pdf/10.1021/bi00483a001
-100.0,J Moult,An analysis of protein folding pathways,https://pubs.acs.org/doi/pdf/10.1021/bi00230a003
-100.0,K Lindorff-Larsen,How fast-folding proteins fold,https://www.science.org/doi/abs/10.1126/science.1208351
-100.0,TR Sosnick,The barriers in protein folding,https://www.nature.com/articles/nsb0394-149
-100.0,V Daggett,Is there a unifying mechanism for protein folding?,https://www.cell.com/AJHG/fulltext/S0968-0004(02)00012-9
-100.0,D Balchin,In vivo aspects of protein folding and quality control,https://www.science.org/doi/abs/10.1126/science.aac4354
-100.0,PL Freddolino,Challenges in protein-folding simulations,https://www.nature.com/articles/nphys1713
-100.0,CR Matthews - Annual review of biochemistry,Pathways of protein folding.,https://europepmc.org/article/med/8352599
-100.0,M Levitt,Computer simulation of protein folding,https://www.nature.com/articles/253694a0
-100.0,P Crescenzi,On the complexity of protein folding,https://dl.acm.org/doi/pdf/10.1145/276698.276875
-150.0,CM Dobson - Methods,Experimental investigation of protein folding and misfolding,https://www.sciencedirect.com/science/article/pii/S1046202304000477
-100.0,V Daggett,The present view of the mechanism of protein folding,https://www.nature.com/articles/nrm1126
-100.0,TJ Lane,To milliseconds and beyond: challenges in the simulation of protein folding,https://www.sciencedirect.com/science/article/pii/S0959440X12001820
-100.0,KA Dill - Protein Science,Polymer principles and protein folding,https://www.cambridge.org/core/journals/protein-science/article/polymer-principles-and-protein-folding/91C662F114689ED30432D6AF92E81D8C
-100.0,M Mirdita,ColabFold: making protein folding accessible to all,https://www.nature.com/articles/s41592-022-01488-1
+"9 
+",S Gong,Tectonic proteins are important players in non-motile ciliopathies,https://karger.com/cpb/article-abstract/50/1/398/76458
+"9 
+",HM Truong,The tectonic complex regulates membrane protein composition in the photoreceptor cilium,https://www.nature.com/articles/s41467-023-41450-z
+"9 
+",Y Hashimoto,Nanogel tectonics for tissue engineering: protein delivery systems with nanogel chaperones,https://onlinelibrary.wiley.com/doi/abs/10.1002/adhm.201800729
+"9 
+",JF Reiter,"Tectonic, a novel regulator of the Hedgehog pathway required for both activation and inhibition",https://genesdev.cshlp.org/content/20/1/22.short
+"6 
+",VC Thakur,Tectonics of the region of Eastern Himalayan syntaxis,https://www.jstor.org/stable/24078227
+"3 
+",RD Cummings - Proceedings of the National Academy of …,If it is methylated it must be Tectonic,https://www.pnas.org/doi/abs/10.1073/pnas.1408652111
+"9 
+",S Lou,Peptide Tectonics: Encoded Structural Complementarity Dictates Programmable Self‐Assembly,https://onlinelibrary.wiley.com/doi/abs/10.1002/advs.201802043
+"8 
+",M Fleming,Genome Tectonics: Linking Dynamic Genome Organization with Cellular Nutrients,https://karger.com/lfg/article/16/1/21/835563
+"8 
+",U Schreiber,Hypothesis: Origin of life in deep-reaching tectonic faults,https://link.springer.com/article/10.1007/s11084-012-9267-4
+"8 
+",SB Hedges - Proceedings of the National Academy of …,Afrotheria: Plate tectonics meets genomics,https://www.pnas.org/doi/abs/10.1073/pnas.98.1.1
