@@ -63,6 +63,9 @@ class scraped:
         genai.configure(api_key=API_key)
         model = genai.GenerativeModel(model_name="gemini-1.5-flash")
 
+        # Token count
+        tokens = model.count_tokens(prompt)
+
         # Extract the score from Gemini's answer
         try:
             response = model.generate_content([prompt])
@@ -71,7 +74,7 @@ class scraped:
             content = candidate['content']
             parts = content['parts']
             score = parts[0]['text']
-            return score
+            return score, tokens
         except (KeyError, TypeError) as e:
             print(f"Error extracting score: {e}")
 
@@ -119,6 +122,8 @@ def scrape(keywords, num_pages, most_recent, scoring):
         soup = BeautifulSoup(response.content, "html.parser")
         results = soup.find_all("div", class_="gs_ri")
 
+        total_tokens = []
+
         for result in results:
             title = result.find("h3", class_="gs_rt").text
             # The two following blocks exclude books from the results that scrape() will provide.
@@ -144,7 +149,8 @@ def scrape(keywords, num_pages, most_recent, scoring):
             if scoring == "arithmetic":
                 score = scraped.rating(paper.format_title(), keywords)
             if scoring == "gemini":
-                score = scraped.gemini_rating(paper.format_title(), keywords)
+                score, tokens = scraped.gemini_rating(paper.format_title(), keywords)
+                total_tokens.append(tokens)
 
             papers.append({"Score": score, "Author": paper.format_author(), "Title": paper.format_title(),
                            "Link": paper.link})
@@ -154,6 +160,9 @@ def scrape(keywords, num_pages, most_recent, scoring):
     pbar.close()
 
     print("The request(s) to Google Scholar was/were successful")
+    if scoring == "gemini":
+        print(f"The input tokens you used were {sum(total_tokens)}/1 048 576.\n"
+              f"Remaining today: {1048576-sum(total_tokens)}")
 
     current_dir = os.path.dirname(os.path.abspath(__file__))  # finds the directory in which this script is executed
     field_names = ["Score", "Author", "Title", "Link"]
