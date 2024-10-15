@@ -7,13 +7,13 @@ Score,Author,Title,Link
 ",Y Hashimoto,Nanogel tectonics for tissue engineering: protein delivery systems with nanogel chaperones,https://onlinelibrary.wiley.com/doi/abs/10.1002/adhm.201800729
 "9 
 ",JF Reiter,"Tectonic, a novel regulator of the Hedgehog pathway required for both activation and inhibition",https://genesdev.cshlp.org/content/20/1/22.short
-"6 
+"5 
 ",VC Thakur,Tectonics of the region of Eastern Himalayan syntaxis,https://www.jstor.org/stable/24078227
 "3 
 ",RD Cummings - Proceedings of the National Academy of …,If it is methylated it must be Tectonic,https://www.pnas.org/doi/abs/10.1073/pnas.1408652111
 "9 
 ",S Lou,Peptide Tectonics: Encoded Structural Complementarity Dictates Programmable Self‐Assembly,https://onlinelibrary.wiley.com/doi/abs/10.1002/advs.201802043
-"8 
+"7 
 ",M Fleming,Genome Tectonics: Linking Dynamic Genome Organization with Cellular Nutrients,https://karger.com/lfg/article/16/1/21/835563
 "8 
 ",U Schreiber,Hypothesis: Origin of life in deep-reaching tectonic faults,https://link.springer.com/article/10.1007/s11084-012-9267-4

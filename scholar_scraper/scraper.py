@@ -1,6 +1,7 @@
 import csv
 import os
 import webbrowser
+import logging
 from datetime import datetime
 
 import click
@@ -10,6 +11,12 @@ import requests
 from bs4 import BeautifulSoup
 from tabulate import tabulate
 from tqdm import tqdm
+
+logging.basicConfig(
+    filename="tokens_usage.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
 
 
 class scraped:
@@ -66,6 +73,7 @@ class scraped:
         # Token count
         response = model.count_tokens(prompt)
         tokens = response.total_tokens
+        logging.info(f"used GeminiTokens: {tokens}")
 
         # Extract the score from Gemini's answer
         try:
@@ -75,9 +83,26 @@ class scraped:
             content = candidate['content']
             parts = content['parts']
             score = parts[0]['text']
-            return score, tokens
+            return score
         except (KeyError, TypeError) as e:
             print(f"Error extracting score: {e}")
+
+
+def sum_today_tokens():
+    total_tokens = 0
+    today = datetime.now().strftime('%Y-%m-%d')
+
+    with open('tokens_usage.log', 'r') as log_file:
+        for line in log_file:
+            if today in line:
+                try:
+                    tokens = int(line.strip().split("used GeminiTokens: ")[1])
+                    total_tokens += tokens
+                except (IndexError, ValueError):
+                    # If there is an error in parsing, ignore the line
+                    pass
+
+    return total_tokens
 
 
 @click.command("scholar", help="Launch the scraping activity on Google Scholar")
@@ -123,8 +148,6 @@ def scrape(keywords, num_pages, most_recent, scoring):
         soup = BeautifulSoup(response.content, "html.parser")
         results = soup.find_all("div", class_="gs_ri")
 
-        total_tokens = []
-
         for result in results:
             title = result.find("h3", class_="gs_rt").text
             # The two following blocks exclude books from the results that scrape() will provide.
@@ -150,8 +173,7 @@ def scrape(keywords, num_pages, most_recent, scoring):
             if scoring == "arithmetic":
                 score = scraped.rating(paper.format_title(), keywords)
             if scoring == "gemini":
-                score, tokens = scraped.gemini_rating(paper.format_title(), keywords)
-                total_tokens.append(tokens)
+                score = scraped.gemini_rating(paper.format_title(), keywords)
 
             papers.append({"Score": score, "Author": paper.format_author(), "Title": paper.format_title(),
                            "Link": paper.link})
@@ -162,8 +184,8 @@ def scrape(keywords, num_pages, most_recent, scoring):
 
     print("The request(s) to Google Scholar was/were successful")
     if scoring == "gemini":
-        print(f"The input tokens you used were {sum(total_tokens)}/1 048 576.\n"
-              f"Remaining today: {1048576-sum(total_tokens)}")
+        print(f"The input tokens you used today are {sum_today_tokens()}/1048576.\n"
+              f"Remaining today: {1048576 - sum_today_tokens()}")
 
     current_dir = os.path.dirname(os.path.abspath(__file__))  # finds the directory in which this script is executed
     field_names = ["Score", "Author", "Title", "Link"]
@@ -182,7 +204,7 @@ def scrape(keywords, num_pages, most_recent, scoring):
     headers.insert(0, "Index")
     tabula = tabulate(df[["Score", "Author", "Title"]], headers=headers, showindex=True,
                       colalign=("left", "left", "left", "left"),
-                      tablefmt="simple", maxcolwidths=[5, 5, 10, 90])
+                      tablefmt="simple", maxcolwidths=[5, 5, 20, 90])
 
     print(tabula)
 
